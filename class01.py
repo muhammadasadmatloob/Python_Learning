@@ -26,3 +26,27 @@ for items in inventory:
     else:
         pass
 
+
+# class
+
+class employee:
+
+    def __init__(self,name,role):
+        self.name=name
+        self.role=role
+
+    def clock_in(self):
+        print(f"{self.name} clocked in as {self.role}")
+
+class cashier(employee):
+    
+    def scan_item(self,item_name): 
+        print(f"{self.name} just scanned a {item_name}.")
+
+
+
+register_worker = cashier("Muhammad Asad Matloob", "Cashier")
+
+register_worker.clock_in()
+register_worker.scan_item("Headphones")
+
