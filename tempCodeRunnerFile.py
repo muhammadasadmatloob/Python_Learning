@@ -1,4 +1,2 @@
-age = int ( input("Enter your age: "))
-years = 100
-years_remains_to_convert_to_100 =  years - age
-print(years_remains_to_convert_to_100)
+for i in range(2,51,2):
+        print(i)
