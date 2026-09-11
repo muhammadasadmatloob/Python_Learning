@@ -1,11 +1,14 @@
+def two_sum(target,arr):
+    seen = {}
+    for index,num in enumerate(arr):
+        needed = target - num
 
-def check_palindrome(word):
-    reversed_word = word[::-1]
-    if word == reversed_word:
-        return True
-    else:
-        return False
-            
-    
-words = input("enter any word:")
-print(check_palindrome(words))
+        if needed in seen:
+            return[seen[needed],index]
+
+        seen[num] = index
+
+nums = [2, 7, 11, 15]
+target = 9
+
+print(two_sum(target,nums))
